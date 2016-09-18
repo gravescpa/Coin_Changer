@@ -13,12 +13,16 @@
 
 # Tried to add a user input but it doesn't work
 # puts "I can tell you the combination of the least amount of coins for the number of cents you have"
-# print "How many cents do you have?"
-# cents_received = gets.chomp
+# 	print "How many cents do you have? "
+# 	cents_received(gets.chomp)
 
 
 
 def coin_changer(cents_received)
+
+	puts "I can tell you the combination of the least amount of coins for the number of cents you have"
+	print "How many cents do you have? "
+	cents_received(gets.chomp)
 
 	coins = {}
 
@@ -35,6 +39,7 @@ def coin_changer(cents_received)
 	end
 
 	coins
+	
 end
 
 	#This is the first round of attempts
@@ -50,6 +55,7 @@ end
 
 	# end
 
-coins = coin_changer(352)
+
+coins = coin_changer(cents_received)
 puts coins
 
