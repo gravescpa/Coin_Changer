@@ -18,8 +18,8 @@ end
 post '/cents' do
 	name = params[:user_name].capitalize
 	cents = params[:cents].to_i
-	coin_changer(cents)
-	"The least amount of change I can give you for #{cents} cents is "
+	coins = coin_changer(cents)
+	"The least amount of change I can give you for #{cents} cents is #{coins}"
 	# redirect '/3_fav_num?name=' + name + '&age=' + age
 end
 
