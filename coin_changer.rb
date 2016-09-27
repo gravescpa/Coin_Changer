@@ -28,12 +28,14 @@ def coin_changer(cents_received)
 
 	coins = {}
 
-	coins_value = {:sacagawea => 100, :half_dollar => 50, :quarter => 25, :dime => 10, :nickel => 5, :penny => 1}
+	coins_value = {:dollar => 100, :half_dollar => 50, :quarter => 25, :dime => 10, :nickel => 5, :penny => 1}
 	
 	coins_value.each do |coin, value|
 
 		if cents_received >= value
 			coins[coin] = cents_received / value
+		else
+			coins[coin] = 0
 		end
 
 		cents_received = cents_received % value
@@ -54,6 +56,9 @@ def coin_changer(cents_received)
 
 	
 end
+
+# def string(results)
+# 	coins.each do |key, value|
 
 
 # coins = coin_changer()
