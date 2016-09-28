@@ -19,10 +19,8 @@ post '/cents' do
 	name = params[:user_name].capitalize
 	cents = params[:cents].to_i
 	coins = coin_changer(cents)
-# "The least amount of change I can give you for #{cents} cents is #{coins}"
-
-
-"The least amount of change I can give you for #{cents} cents is: #{coins[:dollar]} dollars, #{coins[:quarter]} quarter(s), #{coins[:nickel]} nickel(s), #{coins[:dime]} dime(s), and #{coins[:penny]} penny(s)."
+	# "The least amount of change I can give you for #{cents} cents is #{coins}"
+	"The least amount of change I can give you for #{cents} cents is: #{coins[:dollar]} dollars, #{coins[:half_dollar]} half-dollar, #{coins[:quarter]} quarter(s), #{coins[:nickel]} nickel(s), #{coins[:dime]} dime(s), and #{coins[:penny]} penny(s)."
 	
 end
 
